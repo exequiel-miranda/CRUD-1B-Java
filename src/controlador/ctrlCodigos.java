@@ -18,6 +18,9 @@ public class ctrlCodigos implements MouseListener{
         this.vista = vista;
         
         vista.btnAgregar.addMouseListener(this);
+        
+        modelo.Mostrar(vista.jtbCodigos);
+        vista.btnElimnar.addMouseListener(this);
     }
 
     @Override
@@ -28,10 +31,15 @@ public class ctrlCodigos implements MouseListener{
             modelo.setCarnet_estudiante(Integer.parseInt(vista.txtCarnet.getText()));
             modelo.setTipo_Codigo(vista.txtTipoCodigo.getText());
             
-            modelo.Guardar();
-                    
-
+            modelo.Guardar();   
+            modelo.Mostrar(vista.jtbCodigos);
         }
+        
+        if(e.getSource() == vista.btnElimnar){
+            modelo.Eliminar(vista.jtbCodigos);
+            modelo.Mostrar(vista.jtbCodigos);
+        }
+        
         
     }
 
