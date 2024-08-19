@@ -5,11 +5,14 @@ import java.awt.event.MouseListener;
 import modelo.Codigos;
 import vista.frmCodigos;
 
+//3- Heredar de la clase MouseListener
 public class ctrlCodigos implements MouseListener{
-    
+        //1-Mandar a llamar a las otras capas
     private Codigos modelo;
     private frmCodigos vista;
     
+ 
+       //2- crear el constructor 
     public ctrlCodigos(Codigos modelo, frmCodigos vista){
         this.modelo = modelo;
         this.vista = vista;
