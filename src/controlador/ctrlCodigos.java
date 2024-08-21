@@ -10,7 +10,7 @@ public class ctrlCodigos implements MouseListener{
         //1-Mandar a llamar a las otras capas
     private Codigos modelo;
     private frmCodigos vista;
-    
+ 
  
        //2- crear el constructor 
     public ctrlCodigos(Codigos modelo, frmCodigos vista){
@@ -18,9 +18,11 @@ public class ctrlCodigos implements MouseListener{
         this.vista = vista;
         
         vista.btnAgregar.addMouseListener(this);
-        
         modelo.Mostrar(vista.jtbCodigos);
         vista.btnElimnar.addMouseListener(this);
+        vista.jtbCodigos.addMouseListener(this);
+        vista.btnActualizar.addMouseListener(this);
+    
     }
 
     @Override
@@ -40,7 +42,18 @@ public class ctrlCodigos implements MouseListener{
             modelo.Mostrar(vista.jtbCodigos);
         }
         
+        if(e.getSource() == vista.jtbCodigos){
+            modelo.cargarDatosTabla(vista);
+        }
         
+        if(e.getSource() == vista.btnActualizar){
+            modelo.setNombre_estudiante(vista.txtNombre.getText());
+            modelo.setTipo_Codigo(vista.txtTipoCodigo.getText());
+            modelo.setCarnet_estudiante(Integer.parseInt(vista.txtCarnet.getText()));
+            
+            modelo.Actualizar(vista.jtbCodigos);
+            modelo.Mostrar(vista.jtbCodigos);
+        }
     }
 
     @Override

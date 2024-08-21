@@ -52,6 +52,8 @@ public class frmCodigos extends javax.swing.JFrame {
         Nombre1 = new javax.swing.JLabel();
         Nombre2 = new javax.swing.JLabel();
         Nombre3 = new javax.swing.JLabel();
+        brnBuscar = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,7 +87,7 @@ public class frmCodigos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jtbCodigos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 780, 300));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 780, 300));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("Codigos de estudiantes");
@@ -103,6 +105,10 @@ public class frmCodigos extends javax.swing.JFrame {
         Nombre3.setText("Tipo codigo");
         jPanel1.add(Nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
 
+        brnBuscar.setText("Buscar");
+        jPanel1.add(brnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 110, 50));
+        jPanel1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 460, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,7 +122,7 @@ public class frmCodigos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 785, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 848, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -163,6 +169,7 @@ public class frmCodigos extends javax.swing.JFrame {
     private javax.swing.JLabel Nombre1;
     private javax.swing.JLabel Nombre2;
     private javax.swing.JLabel Nombre3;
+    public javax.swing.JButton brnBuscar;
     public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnElimnar;
@@ -171,6 +178,7 @@ public class frmCodigos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTable jtbCodigos;
+    public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtCarnet;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtTipoCodigo;
